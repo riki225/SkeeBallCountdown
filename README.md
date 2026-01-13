@@ -1,2 +1,2 @@
 # SkeeBallCountdown
-これは学校宿題
+これは宿題
