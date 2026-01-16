@@ -120,7 +120,7 @@ public class SkiBallCountdown extends JPanel implements Runnable{
                     lightStarted = true;
                     playSound("start");
                     try {
-                        if(hi > Integer.valueOf(highScoreString)){
+                        if(hi < Integer.valueOf(highScoreString)){
                             highScoreString = String.valueOf(hi);
                         }
                         hi = 3000;
@@ -148,7 +148,7 @@ public class SkiBallCountdown extends JPanel implements Runnable{
             }
             Pastball = Ball;
             if(Ball == 0 && ballHit.APressed && started){
-                if(hi > Integer.valueOf(highScoreString)){
+                if(hi < Integer.valueOf(highScoreString)){
                     highScoreString = String.valueOf(hi);
                     newHighScore = true;
                 }else{
@@ -281,7 +281,7 @@ public class SkiBallCountdown extends JPanel implements Runnable{
         if(!ballHit.WPressed && isNeutralPressedv2){
             isNeutralPressedv2 = !isNeutralPressedv2;
         }
-        if(Ball == 0 && hi > Integer.parseInt(highScoreString)){
+        if(Ball == 0 && hi < Integer.parseInt(highScoreString)){
                 Path mainDatabasePath = Paths.get("HighScore.txt");
                 //clears out database file so we can rewrite it
                 try {
